@@ -18,7 +18,7 @@ warnings.filterwarnings('ignore')
 # ─────────────────────────────────────────────
 #  PATHS  — change INPUT_DIR if needed
 # ─────────────────────────────────────────────
-INPUT_DIR  = "."          # folder with raw Samsung CSVs
+INPUT_DIR  = "Dataset Unclean"          # folder with raw Samsung CSVs
 OUTPUT_DIR = "cleaned"    # folder where clean CSVs will be saved
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)

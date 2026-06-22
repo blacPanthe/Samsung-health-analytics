@@ -1,0 +1,55 @@
+
+================================================================================
+  FEATURE SELECTION REPORT — SAMSUNG HEALTH PROJECT
+  Generated: 2026-06-22 16:54
+================================================================================
+
+STARTING POINT
+  master_featured.csv: 108 columns total
+  Numeric candidates considered for selection: 70
+  Excluded upfront as leakage (would let the model "cheat"): 17
+
+STEP 1 — High-null drop (> 50% missing)
+  Dropped: 6
+  body_fat, quality, avg_heart_rate_ex, min_heart_rate, max_heart_rate, hr_readings
+
+STEP 2 — Redundant feature drop (|corr| > 0.9)
+  Dropped: 19
+  distance_km, step_calorie, active_time_min, walk_step_count, total_calories_burned, exercise_duration, week_of_year, quarter, week_num, calorie_deficit_est, workout_intensity_score, daily_sleep_deficit, sleep_debt_7d, net_calorie_balance, steps_avg_prev_week, steps_avg_prev_month, hr_avg_prev_week, calories_avg_prev_week, days_since_start
+
+STEP 3 — Kept top 25 by Random Forest importance
+  1. calories_avg_prev_month  (0.0945)
+  2. month  (0.0725)
+  3. year  (0.0626)
+  4. hr_7d_avg  (0.0613)
+  5. calorie_balance_7d_avg  (0.0455)
+  6. weekly_training_volume  (0.0447)
+  7. steps_30d_avg  (0.0420)
+  8. monthly_workout_count  (0.0365)
+  9. run_step_count  (0.0361)
+  10. rest_calorie  (0.0347)
+  11. steps_14d_avg  (0.0259)
+  12. sleep_consistency_7d  (0.0258)
+  13. tdee  (0.0240)
+  14. avg_heart_rate  (0.0238)
+  15. month_progress  (0.0234)
+  16. plateau_streak  (0.0214)
+  17. steps_7d_avg  (0.0211)
+  18. workouts_prev_14d  (0.0208)
+  19. sleep_7d_avg  (0.0204)
+  20. is_plateau  (0.0195)
+  21. efficiency_7d_avg  (0.0182)
+  22. sleep_avg_prev_week  (0.0179)
+  23. hr_lag_7d  (0.0177)
+  24. active_calorie  (0.0153)
+  25. calories_per_step  (0.0144)
+
+STEP 4 — Model accuracy: full set vs selected set (test year: 2025)
+  Full feature set (47 features):     20.1%
+  Selected feature set (25 features):            22.0%
+
+RESULT
+  master_selected.csv → 2,400 rows × 29 columns
+  Reduced from 108 → 29 columns (4 identifiers/targets + 25 features)
+
+================================================================================

@@ -1,0 +1,64 @@
+
+================================================================================
+  ML MODEL RESULTS — SAMSUNG HEALTH ANALYTICS PROJECT
+  Generated: 2026-06-22 16:47
+================================================================================
+
+DATA SUMMARY:
+  Total days analyzed:    2,400
+  Date range:             2019-06-12 → 2026-01-03
+  Current weight:         99.7 kg
+  Goal weight:            85.0 kg
+  Weight to lose:         14.7 kg
+
+MODEL 1 — WEEK CLASSIFIER (Random Forest):
+  Task:     Predict fat_loss / maintenance / weight_gain from daily habits
+  Accuracy: 44.8%  (tested on 2025 data unseen during training)
+  Training: 2019 – 2024  |  Test: 2025
+
+  Top 5 behavioral predictors of fat loss weeks:
+    1. days_since_start  (0.115)
+    2. rest_days_since_workout  (0.114)
+    3. calories_avg_prev_week  (0.106)
+    4. calorie_balance_7d_avg  (0.102)
+    5. weekly_training_volume  (0.075)
+
+MODEL 2 — WEIGHT PREDICTOR (Random Forest Regressor):
+  Task:     Predict weight 7 days into the future
+  MAE:      0.343 kg  (average prediction error)
+  RMSE:     0.427 kg
+  R²:       -0.331  (variance explained)
+
+  Top 5 drivers of next week's weight:
+    1. bmi  (0.438)
+    2. weight  (0.406)
+    3. days_since_start  (0.082)
+    4. weight_7d_avg  (0.036)
+    5. weight_30d_avg  (0.034)
+
+SIMULATION RESULTS:
+  Current Routine                  +201 kcal/day  →  76.1 weeks
+  Better Diet (-300 kcal intake)   -300 kcal/day  →  Never (>600 days)
+  More Cardio (+3K steps daily)    -175 kcal/day  →  Never (>600 days)
+  Optimal (Diet + Cardio)          -500 kcal/day  →  Never (>600 days)
+
+KEY INSIGHTS:
+  1. Your average daily calorie balance (last 90 days) is +201 kcal
+     → This is essentially MAINTENANCE — no fat loss will happen at this rate.
+
+  2. To reach 85 kg, you need a sustained calorie DEFICIT.
+     → Optimal scenario (-500 kcal/day): ~32 weeks = 7.5 months
+
+  3. Top behavioral predictors of your fat loss weeks:
+     → days_since_start and rest_days_since_workout are your strongest levers.
+
+  4. Current plateau days: 888 out of 2,400 (37%)
+     → More than one-third of your journey has been stalled.
+
+RECOMMENDATIONS (data-driven):
+  → Create a 300–500 kcal daily deficit (track food accurately)
+  → Add 3,000+ steps/day on top of current average (5007 steps)
+  → Aim for 2+ structured workouts per week (current: 1.4/wk)
+  → Prioritize 7.5 hrs sleep (current avg: 7.0 hrs)
+
+================================================================================
