@@ -1,0 +1,51 @@
+
+================================================================================
+  ML ANALYSIS SUMMARY — SAMSUNG HEALTH PROJECT
+  Generated: 2026-04-06 14:22
+================================================================================
+
+PART 1 — CLUSTERING (2 behavioral clusters found)
+  Cluster 0: 🔥 Fat Loss Mode  (341 days)
+  Cluster 1: 💪 Active Maintenance  (2059 days)
+
+  Best cluster for fat loss: 🔥 Fat Loss Mode
+  → This is the behavioral profile most associated with your weight loss weeks.
+
+PART 2 — PHASE DETECTION (6 life phases detected)
+  Phase 0: Post-Cut Rebound
+  Phase 1: Recovery Phase
+  Phase 2: Heavy / High Weight Phase
+  Phase 3: Low Activity Phase
+  Phase 4: Maintenance Plateau
+  Phase 5: Active Cutting Phase
+
+  → These phases were automatically detected from changes in your 30-day
+    rolling behavior patterns — no manual labeling needed.
+
+PART 3 — FEATURE IMPORTANCE
+
+  A) Fat Loss Week Classifier — top 5 features:
+     1. month  (0.1580)
+     2. calorie_balance_7d_avg  (0.1379)
+     3. rest_days_since_workout  (0.0981)
+     4. workouts_prev_14d  (0.0763)
+     5. total_calories_burned  (0.0705)
+
+  B) Weight Change Regressor — top 5 features:
+     1. month  (0.1893)
+     2. rest_days_since_workout  (0.1506)
+     3. workouts_prev_14d  (0.1353)
+     4. calorie_balance_7d_avg  (0.1039)
+     5. steps_avg_prev_week  (0.0613)
+
+  KEY INSIGHT:
+  → month is the #1 behavioral predictor of your fat loss weeks.
+  → month is most correlated with actual weight change magnitude.
+  → Focus on these two levers above everything else.
+
+OUTPUT FILES:
+  ml_charts/    → 9 charts
+  ml_output/    → data_with_clusters.csv, data_with_phases.csv,
+                   feature_importance.csv, analysis_summary.txt
+
+================================================================================
